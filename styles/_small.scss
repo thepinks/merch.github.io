@@ -1,0 +1,317 @@
+@import './variables';
+
+/* Prevent adjustments of font size when orientation changes  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* apply a natural box layout model to all elements */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: black;
+        img {
+            width: 60px;
+            height: 100%;
+            margin-right: 10px;
+        }
+        h1 {
+            font-family: $font;
+            font-size: 18pt;
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.nav-md-lg {
+    display: none;
+}
+#sub-nav {
+    display: none;
+}
+.nav-sm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    div {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: $prime;
+        background: linear-gradient(0deg, $prime 20%, $second 100%);
+        #menu {
+            border: none;
+            background: none;
+            font-size: 16pt;
+            font-weight: bold;
+            color: white;
+            margin-left: 10px;
+        }
+        #x {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 16pt;
+            font-weight: bold;
+            font-family: $font;
+            color: white;
+            margin-left: 10px;
+            transition: ease-in-out 0.2s;
+        }
+    }
+    #dd-menu {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px white;
+        transition: ease-in-out 0.2s;
+        background: $prime;
+        .dd-item {
+            width: 100%;
+            height: 50px;
+            border-bottom: solid 1px white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: white;
+                font-family: $font;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 20px;
+            }
+        }
+    }
+    #dd-sub-menu {
+        width: 100%;
+        height: 120px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a {
+            width: 100%;
+            height: 40px;
+            font-family: $font;
+            color: white;
+            background: $prime;
+            border-bottom: solid 1px white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 40px;
+        }
+    }
+}
+#active {
+    background: darken($prime, 10%);
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    h1 {
+        font-family: $font;
+    }
+    h2 {
+        font-family: $font;
+    }
+}
+
+form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    h3 {
+        font-family: $font;
+        margin: 20px 0px 5px 0px;
+    }
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+        font-family: $font;
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+        font-family: $font;
+    }
+}
+.swag {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+        font-family: $font;
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+        font-family: $font;
+    }
+    select {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        border: solid 1px grey;
+        border-radius: 5px;
+    }
+    #radio {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: $font;
+        font-size: 10pt;
+        margin-top: 10px;
+        input {
+            width: 10px;
+            height: 5px;
+            margin-bottom: 0;
+            font-family: $font;
+        }
+    }
+}
+.payment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 10px;
+    label {
+        font-family: $font;
+    }
+    input {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: solid 1px grey;
+        border-radius: 5px;
+        font-family: $font;
+    }
+}
+
+input:required {
+    border: solid 1px lighten($prime, 40%);
+}
+input:valid {
+    border: solid 1px grey;
+}
+input:invalid {
+    border: solid 1px red;
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: $second;
+    margin-top: 20px;
+    color: white;
+    font-family: $font;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    &:hover {
+        background: darken($second, 10%);
+    }
+}
+
+span {
+    color: red;
+    font-family: $font;
+}
+
+footer {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $prime;
+    p {
+        font-family: $font;
+        font-size: 10pt;
+        color: white;
+    }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
